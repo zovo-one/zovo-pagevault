@@ -1,13 +1,16 @@
 {
-	"name": "single-file-mv3",
+	"name": "zovo-pagevault",
 	"version": "1.0.0",
-	"description": "SingleFile",
-	"author": "Gildas Lormeau",
+	"description": "Versioned local web-page archive built on SingleFile",
+	"author": "Zovo; SingleFile contributors",
 	"license": "AGPL-3.0-or-later",
 	"scripts": {
 		"dev": "./build-dev.sh",
-		"build": "./build-extension.sh",
-		"test": "node test/editor-e2e.mjs",
+		"build:upstream": "./build-extension.sh",
+		"build": "npm run build:upstream && node zpv-tools/build.mjs",
+		"test:upstream": "node test/editor-e2e.mjs",
+		"test": "node --test test/zpv-*.test.mjs",
+		"check": "npm test && node zpv-tools/check-build.mjs dist",
 		"install-test-browser": "browsers install chrome@131.0.6778.204 --path test/.browser"
 	},
 	"type": "module",

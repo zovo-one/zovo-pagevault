@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Visual diff · PageVault</title>
+	<link rel="stylesheet" href="observatory-shell.css"><link rel="stylesheet" href="archive-stage.css">
+</head>
+<body class="stage-body">
+	<header class="topbar stage-topbar"><div class="brand-lockup"><button id="backButton" class="quiet" aria-label="Back to library">←</button><div class="stage-title"><strong id="diffTitle">Visual snapshot diff</strong><span id="diffMeta">Loading versions…</span></div></div><div class="top-actions"><button id="modeButton">Overlay changes</button></div></header>
+	<main class="diff-layout"><div id="diffSummary" class="diff-summary"></div><div id="diffFrames" class="diff-frames"><section class="diff-pane"><header><strong>Before</strong><span id="beforeLabel"></span></header><iframe id="beforeFrame" sandbox="allow-same-origin" title="Earlier snapshot"></iframe></section><section class="diff-pane"><header><strong>After</strong><span id="afterLabel"></span></header><iframe id="afterFrame" sandbox="allow-same-origin" title="Later snapshot"></iframe></section></div></main>
+	<script type="module" src="diff.js"></script>
+</body>
+</html>

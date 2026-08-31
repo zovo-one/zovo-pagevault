@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="PageVault aperture">
+  <defs>
+    <linearGradient id="vaultSky" x1="18" y1="12" x2="108" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#154E54"/>
+      <stop offset="1" stop-color="#0B252B"/>
+    </linearGradient>
+    <linearGradient id="vaultGlow" x1="33" y1="26" x2="92" y2="99" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79D4C8"/>
+      <stop offset=".55" stop-color="#EAB04B"/>
+      <stop offset="1" stop-color="#8C69B5"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="30" fill="url(#vaultSky)"/>
+  <path d="M34 24h45l17 17v63H34z" fill="#FFF9E9"/>
+  <path d="M79 24v18h17" fill="#D9EEE9"/>
+  <circle cx="61" cy="67" r="28" fill="url(#vaultGlow)"/>
+  <path d="M61 42a25 25 0 0 1 22 13L61 67z" fill="#0D6D70"/>
+  <path d="M83 55a25 25 0 0 1-1 26L61 67z" fill="#E9A83D"/>
+  <path d="M82 81a25 25 0 0 1-23 11l2-25z" fill="#7357A4"/>
+  <path d="M59 92a25 25 0 0 1-20-15l22-10z" fill="#48A9A0"/>
+  <path d="M39 77a25 25 0 0 1 4-26l18 16z" fill="#F0C567"/>
+  <path d="M43 51a25 25 0 0 1 18-9v25z" fill="#326F76"/>
+  <circle cx="61" cy="67" r="9" fill="#FFF9E9"/>
+  <circle cx="61" cy="67" r="4" fill="#10252B"/>
+</svg>

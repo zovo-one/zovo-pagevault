@@ -1,15 +1,14 @@
 {
-	"name": "SingleFile",
-	"author": "Gildas Lormeau",
-	"homepage_url": "https://www.getsinglefile.com",
+	"name": "Zovo PageVault",
+	"author": "Zovo; based on SingleFile by Gildas Lormeau",
+	"homepage_url": "https://zovo.one",
 	"icons": {
-		"16": "src/ui/resources/icon_16.png",
-		"32": "src/ui/resources/icon_32.png",
-		"48": "src/ui/resources/icon_48.png",
-		"64": "src/ui/resources/icon_64.png",
-		"128": "src/ui/resources/icon_128.png"
+		"16": "src/zpv/assets/pagevault-16.png",
+		"32": "src/zpv/assets/pagevault-32.png",
+		"48": "src/zpv/assets/pagevault-48.png",
+		"128": "src/zpv/assets/pagevault-128.png"
 	},
-	"version": "1.23.1",
+	"version": "1.0.0",
 	"description": "__MSG_extensionDescription__",
 	"content_scripts": [
 		{
@@ -51,22 +50,21 @@
 		"service_worker": "lib/single-file-extension-background.js"
 	},
 	"side_panel": {
-		"default_path": "src/ui/pages/panel.html"
+		"default_path": "src/zpv/vault.html"
 	},
 	"options_ui": {
-		"browser_style": true,
-		"page": "src/ui/pages/options.html",
-		"open_in_tab": false
+		"page": "src/zpv/vault.html",
+		"open_in_tab": true
 	},
 	"action": {
+		"default_popup": "src/zpv/lens.html",
 		"default_icon": {
-			"16": "src/ui/resources/icon_16.png",
-			"32": "src/ui/resources/icon_32.png",
-			"48": "src/ui/resources/icon_48.png",
-			"64": "src/ui/resources/icon_64.png",
-			"128": "src/ui/resources/icon_128.png"
+			"16": "src/zpv/assets/pagevault-16.png",
+			"32": "src/zpv/assets/pagevault-32.png",
+			"48": "src/zpv/assets/pagevault-48.png",
+			"128": "src/zpv/assets/pagevault-128.png"
 		},
-		"default_title": "__MSG_buttonDefaultTooltip__"
+		"default_title": "Save to PageVault"
 	},
 	"commands": {
 		"save-selected-tabs": {
@@ -131,12 +129,6 @@
 			]
 		}
 	],
-	"oauth2": {
-		"client_id": "207618107333-7tjs1im1pighftpoepea2kvkubnfjj44.apps.googleusercontent.com",
-		"scopes": [
-			"https://www.googleapis.com/auth/drive.file"
-		]
-	},
 	"permissions": [
 		"contextMenus",
 		"downloads",
@@ -145,14 +137,7 @@
 		"activeTab",
 		"scripting",
 		"offscreen",
-		"sidePanel",
 		"declarativeNetRequest"
-	],
-	"optional_permissions": [
-		"identity",
-		"clipboardWrite",
-		"nativeMessaging",
-		"bookmarks"
 	],
 	"host_permissions": [
 		"<all_urls>"

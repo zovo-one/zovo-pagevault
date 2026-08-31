@@ -1,6 +1,6 @@
 {
 	"extensionDescription": {
-		"message": "Save a complete page into a single HTML file",
+		"message": "Archive complete web pages with full-text search, version history, visual diffs, and annotations",
 		"description": "Description of the extension."
 	},
 	"commandSaveSelectedTabs": {

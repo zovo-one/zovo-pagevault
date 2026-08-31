@@ -1,0 +1,10 @@
+Zovo PageVault 1.0.0
+Copyright 2026 Zovo contributors
+
+This work is based on SingleFile-MV3 by Gildas Lormeau and contributors.
+Upstream: https://github.com/gildas-lormeau/SingleFile-MV3
+
+The complete work is licensed under AGPL-3.0-or-later. Upstream copyright
+headers and the full GNU Affero General Public License are retained. Source for
+the distributed version is published at:
+https://github.com/theluckystrike/zovo-pagevault

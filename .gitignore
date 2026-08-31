@@ -5,3 +5,6 @@
 .staging/
 singlefile-extension-*.zip
 /test/.browser/
+/dist/
+/.env
+zovo-pagevault-*.zip

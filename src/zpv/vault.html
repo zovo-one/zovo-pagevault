@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PageVault Library</title>
+	<link rel="stylesheet" href="observatory-shell.css">
+</head>
+<body>
+	<header class="topbar">
+		<div class="brand-lockup"><div class="brand-mark" aria-hidden="true"></div><div><span class="eyebrow">Archive observatory</span><strong>PageVault</strong></div></div>
+		<div class="top-actions">
+			<button id="captureButton" class="primary">Save current page</button>
+			<button id="licenseButton">Plan: <span id="planLabel">Free</span></button>
+			<a class="button quiet" href="../ui/pages/options.html">Capture settings</a>
+		</div>
+	</header>
+	<main class="shell">
+		<section class="hero">
+			<div><span class="eyebrow">Your web, held still</span><h1>A private index of pages worth keeping.</h1><p class="muted">Search the actual text inside every snapshot, revisit earlier versions, compare visual changes, and layer notes onto preserved copies.</p></div>
+			<div class="stats" aria-label="Archive statistics"><div class="stat"><strong id="pageCount">0</strong><span>pages</span></div><div class="stat"><strong id="snapshotCount">0</strong><span>snapshots</span></div><div class="stat"><strong id="storageSize">0 B</strong><span>stored locally</span></div></div>
+		</section>
+		<div class="search-box"><input id="searchInput" type="search" placeholder="Search every saved page…" autocomplete="off" aria-label="Search every saved page"></div>
+		<p id="captureStatus" class="status" role="status"></p>
+		<section>
+			<div class="section-title"><h2 id="archiveTitle">Latest archives</h2><span id="resultCount" class="muted"></span></div>
+			<div id="archiveGrid" class="archive-grid" aria-live="polite"></div>
+		</section>
+		<section id="rulesSection">
+			<div class="section-title"><div><span class="eyebrow">Automatic capture</span><h2>Site rules</h2></div><span class="muted">Save on visit · keep N versions</span></div>
+			<form id="ruleForm" class="rule-form"><input id="ruleHostname" required placeholder="example.com" aria-label="Site hostname"><input id="ruleKeep" type="number" min="1" max="100" value="5" aria-label="Versions to keep"><button class="primary" type="submit">Add rule</button></form>
+			<p id="ruleStatus" class="status" role="status"></p>
+			<div id="rulesList" class="rules"></div>
+		</section>
+	</main>
+	<dialog id="licenseDialog">
+		<form method="dialog" class="dialog-body">
+			<span class="eyebrow">PageVault Pro</span><h2>Keep the whole trail.</h2>
+			<p class="muted">Unlimited auto-archive rules, visual comparison, and annotations. Activation is verified online once and stays available offline.</p>
+			<div class="field-stack"><label for="licenseKey">Licence key</label><input id="licenseKey" class="mono" placeholder="ZOVO-••••-••••-••••-••••" autocomplete="off" spellcheck="false"></div>
+			<p id="licenseStatus" class="status" role="status"></p>
+			<div class="dialog-actions"><button id="pricingButton" type="button" class="quiet">See pricing</button><button id="deactivateButton" type="button" class="danger hidden">Deactivate</button><button value="cancel">Close</button><button id="activateButton" type="button" class="primary">Activate</button></div>
+		</form>
+	</dialog>
+	<script type="module" src="vault.js"></script>
+</body>
+</html>

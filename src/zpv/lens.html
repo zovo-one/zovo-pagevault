@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PageVault</title>
+	<link rel="stylesheet" href="observatory-shell.css">
+	<link rel="stylesheet" href="lens-aperture.css">
+</head>
+<body class="lens-body">
+	<header class="lens-head">
+		<div class="brand-mark" aria-hidden="true"></div>
+		<div><span class="eyebrow">Local archive</span><h1>PageVault</h1></div>
+		<span id="planBadge" class="plan-badge">Free</span>
+	</header>
+	<main>
+		<section class="capture-orbit">
+			<div class="orbit-art" aria-hidden="true"><span></span></div>
+			<p class="muted">Preserve this page as a searchable, self-contained snapshot.</p>
+			<button id="captureButton" class="primary capture-button">Save snapshot</button>
+			<p id="captureStatus" class="status" role="status"></p>
+		</section>
+		<section class="mini-stats" aria-label="Archive statistics">
+			<div><strong id="pageCount">0</strong><span>pages</span></div>
+			<div><strong id="snapshotCount">0</strong><span>snapshots</span></div>
+			<div><strong id="storageSize">0 B</strong><span>stored</span></div>
+		</section>
+		<div class="lens-actions">
+			<button id="openVaultButton">Open library</button>
+			<a class="button pro" href="https://zovo.one/pricing" target="_blank" rel="noreferrer">Unlock Pro</a>
+		</div>
+	</main>
+	<script type="module" src="lens.js"></script>
+</body>
+</html>

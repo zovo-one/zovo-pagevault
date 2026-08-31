@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Saved snapshot · PageVault</title>
+	<link rel="stylesheet" href="observatory-shell.css"><link rel="stylesheet" href="archive-stage.css">
+</head>
+<body class="stage-body">
+	<header class="topbar stage-topbar">
+		<div class="brand-lockup"><button id="backButton" class="quiet" aria-label="Back to library">←</button><div class="stage-title"><strong id="snapshotTitle">Loading snapshot…</strong><span id="snapshotMeta"></span></div></div>
+		<div class="top-actions"><button id="exportButton">Export HTML</button><button id="compareButton">Compare</button></div>
+	</header>
+	<main class="viewer-layout">
+		<div class="page-stage"><iframe id="pageFrame" class="page-frame" sandbox="allow-same-origin" title="Saved page"></iframe></div>
+		<aside class="annotation-panel">
+			<span class="eyebrow">Annotation layer</span><h2>Notes on this copy</h2>
+			<div class="annotation-compose">
+				<button id="selectionButton">Use selection from page</button>
+				<div id="quotePreview" class="quote-preview">Select text inside the saved page, then attach it here.</div>
+				<textarea id="noteInput" placeholder="Why does this matter?"></textarea>
+				<div class="color-row" aria-label="Annotation colour"><button class="swatch active" data-color="amber" aria-label="Amber"></button><button class="swatch" data-color="cyan" aria-label="Cyan"></button><button class="swatch" data-color="violet" aria-label="Violet"></button></div>
+				<button id="addAnnotationButton" class="primary">Add annotation</button>
+				<p id="annotationStatus" class="status" role="status"></p>
+			</div>
+			<div id="annotationList" class="annotation-list"></div>
+		</aside>
+	</main>
+	<script type="module" src="viewer.js"></script>
+</body>
+</html>
